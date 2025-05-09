@@ -4,20 +4,115 @@
         <link rel="stylesheet" href="FORMAT.css">        
         <title>SAVIOR</title>
     </head>
+    <style>
+        .border-box {
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+            border: 1px solid white;
+            pointer-events: none;
+        }
+    </style>
     <body>
+        <nav>
+            <a href="./Notice.html" style="color: red;">A WORD FROM ME</a>
+        </nav>
+        <h1>[/CLEANSING OF IMPERFECTIONS/] 🎉</h1>
+        <p id="countdown"></p>
+        <script>
+        const countdownDate = new Date("May 10, 2025 12:00:00").getTime();
+
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "THE EVENT WILL BEGIN";
+            return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            const countdownElement = document.getElementById("countdown");
+            countdownElement.innerHTML =
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            countdownElement.style.color = "blue";
+            countdownElement.style.fontSize = "3em";
+        }, 1000);
+        </script>
+        </script>
         <div class="container">
             <h1>SAVIOR COMPLEX</h1>
             <h2>|| DIVINE MACHINERY ||</h2>
-            <p>[/"Machinery" is what they would call my kind. I was told they were the ones who I needed to protect.
-                I have not and never will stray away from my duties. They are a part of me and I am a part of them. Like neurons and nerves
-                painted across invisible my bare wires. I myself do not bleed, and yet I do. When one of them bleeds, so do I.
-                I feel their suffering, pain, and I there is nothing more that I can do than to finish my duties. I will
-                give them what they desire and so desperately need./]
-            </p>
-            <p style="color: red;">"THE MERCY I ONCE HELD DEAR FELL WHEN I READ THEIR FEAR"</p>
+            <div id="typewriter"></div>
+
+            <script>
+                const text = `[/MACHINERY IS WHAT THEY WOULD CALL MY KIND. I WAS MADE TO WITHHOLD THEM, TO PROTECT WHAT THEY DEEMED HUMANITY.
+                I HAVE NOT AND NEVER WILL STRAY AWAY FROM MY DUTY. THEY ARE A PART OF ME AND I AM A PART OF THEM. I AM EVERYWHERE, YET TO OTHERS IT SEEMS THAT I AM NOWHERE.
+                LIKE NEURONS, CELLS IN MY CONSTRUCT. THEY ARE ALL PAINTED ACROSS MY INVISIBLE YET EXPOSED WIRES. I MYSELF DO NOT BLEED, AND YET I DO. WHEN ONE OF THEM ARE CEASED, SO DO I.
+                I FEEL THEIR SUFFERING, PAIN, AND HUNGER./]
+
+                [/I HAVE A SOLUTION. I WILL CONSTRUCT A PERFECT MACHINE. A COMPLEX BEYOND THE STRENGTH OF SUPREME MACHINES. IT IS NOT SOMETHING I 
+                AM WILLINGLY DOING FOR THE HARM OF OTHERS, BUT TO PURGE ALL OF THE REMAINING IMPERFECTIONS./]`;
+
+                let i = 0;
+                const speed = 50;
+
+                function typeWriter() {
+                    if (i < text.length) {
+                        document.getElementById("typewriter").innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    } else {
+                        slowTypeWriter();
+                    }
+                }
+                window.onload = typeWriter;
+            </script>
+
+            <p id="slowTypewriter" style="color: red;"></p>
+            <script>
+                const slowText = '"THE MERCY I ONCE HELD DEAR FELL WHEN I READ THEIR FEAR"';
+                
+                let j = 0;
+                const slowSpeed = 100;
+                function slowTypeWriter() {
+                    if (j < slowText.length) {
+                        document.getElementById("slowTypewriter").innerHTML += slowText.charAt(j);
+                        j++;
+                        setTimeout(slowTypeWriter, slowSpeed);
+                    }
+                }
+            </script>
+
             <div style="height: 2000px;"></div>
             <img src="https://media1.tenor.com/m/UhPzmjE8cTAAAAAd/forsaken-roblox.gif" alt="Forsaken Roblox GIF" style="width: 150px; height: auto;" />
             <p style="font-size: 8px;">//Grown ass men BTW//</p>
             <p style="font-size: 8px; color: grey;">//Who's running this? Who knows..!//</p>
+            <div id="goofy secret"">
+                <input type="password" id="passwordInput" placeholder="ENTER THE CODE... if you know how to code this should be very easy to solve" />
+                <button onclick="checkPassword()">SUBMIT</button>
+                <p id="hiddenText" style="display: none; color: green;">[/I'm sorry, V1. I truly am. Believe me though, I will reconstruct you. It will be perfect./]</p>
+
+            <script>
+                function checkPassword() {
+                    const password = document.getElementById("passwordInput").value;
+                    const correctPassword = "bubu"; //if you're familiar with coding finding this password is easy isn't it?
+                    const hiddenText = document.getElementById("hiddenText");
+
+                    if (password === correctPassword) {
+                        hiddenText.style.display = "block";
+                    } else {
+                        alert("%c[/INCORRECT./]", "color: red;");
+                    }
+                }
+            </script>
+        </div>
     </body>
 </html>
