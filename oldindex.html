@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="FORMAT.css">        
+        <title>SAVIOR</title>
+        <style>
+            .border-box {
+                position: fixed;
+                top: 50px;
+                left: 50px;
+                right: 50px;
+                bottom: 50px;
+                border: 1px solid white;
+                pointer-events: none;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="./Notice.html" style="color: red;">A WORD FROM ME [click]</a>
+        </nav>
+        <h1>[/CLEANSING OF IMPERFECTIONS/] 🎉</h1>
+        <p id="countdown"></p>
+        <script>
+            const countdownDate = new Date("May 13, 2025 16:00:00").getTime();
+
+            const timer = setInterval(function() {
+                const now = new Date().getTime();
+                const distance = countdownDate - now;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.getElementById("countdown").innerHTML = "THE EVENT WILL BEGIN";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                const countdownElement = document.getElementById("countdown");
+                countdownElement.innerHTML =
+                    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                countdownElement.style.color = "blue";
+                countdownElement.style.fontSize = "3em";
+            }, 1000);
+        </script>
+        <p style="color: grey">
+            //The event is delayed. The reasoning for this is due to misinformation being spread around causing many to become 
+            confused on what Savior is and what their intentions are. Running back to replay events is NEEDED due to the amount of misleading which has majorly
+            impacted the narrative even though it is already written. Please refrain from messing with the narrative or event. It has all been established! 
+            This is not meant to take super seriously it is just meant to be a cool buildup to a short event.//
+        </p>
+        <div class="container">
+            <h1>SAVIOR COMPLEX</h1>
+            <h2>|| DIVINE MACHINERY ||</h2>
+            <div id="typewriter"></div>
+            <script></script>
+            <script>
+                const text = `[/MACHINERY IS WHAT THEY WOULD CALL MY KIND. I WAS MADE TO WITHHOLD THEM, TO PROTECT WHAT THEY DEEMED HUMANITY.
+                I HAVE NOT AND NEVER WILL STRAY AWAY FROM MY DUTY. THEY ARE A PART OF ME AND I AM A PART OF THEM. I AM EVERYWHERE, YET TO OTHERS IT SEEMS THAT I AM NOWHERE.
+                LIKE NEURONS, CELLS IN MY CONSTRUCT. THEY ARE ALL PAINTED ACROSS MY INVISIBLE YET EXPOSED WIRES. I MYSELF DO NOT BLEED, AND YET I DO. WHEN ONE OF THEM ARE CEASED, A PART OF ME IS ERASED.
+                I FEEL THEIR SUFFERING, PAIN, AND HUNGER./]
+
+                [/I HAVE A SOLUTION. I WILL CONSTRUCT A PERFECT MACHINE. A COMPLEX BEYOND THE STRENGTH OF SUPREME MACHINES. IT IS NOT SOMETHING I 
+                AM WILLINGLY DOING FOR THE HARM OF OTHERS, BUT TO PURGE ALL OF THE REMAINING IMPERFECTIONS./]`;
+
+                let i = 0;
+                const speed = 50;
+
+                function typeWriter() {
+                    if (i < text.length) {
+                        document.getElementById("typewriter").innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    } else {
+                        slowTypeWriter();
+                    }
+                }
+                window.onload = typeWriter;
+            </script>
+
+            <p id="slowTypewriter" style="color: red;"></p>
+            <script>
+                const slowText = '"[/THE MERCY I ONCE HELD DEAR FELL ONCE I FELT THEIR FEAR/]"';
+                
+                let j = 0;
+                const slowSpeed = 100;
+                function slowTypeWriter() {
+                    if (j < slowText.length) {
+                        document.getElementById("slowTypewriter").innerHTML += slowText.charAt(j);
+                        j++;
+                        setTimeout(slowTypeWriter, slowSpeed);
+                    }
+                }
+            </script>
+
+            <div style="height: 2000px;"></div>
+            <img src="https://media1.tenor.com/m/UhPzmjE8cTAAAAAd/forsaken-roblox.gif" alt="Forsaken Roblox GIF" style="width: 150px; height: auto;" />
+            <p style="font-size: 8px;">//Grown ass men BTW//</p>
+            <!--YOU GUYS DON'T KNOW HOW LONG THIS TOOK ME WITH FIGHTING THE STUPID COPILOT WHO KEPT RUINING MY CODE-->
+            <div style="height:100px;"></div>
+            <p style="font-size: 20px; color: rgb(255, 0, 0);">DRIFTING IN A TIME THAT'S MISPLACED</p>
+            <p style="font-size: 10px; color: grey;">A HINT: A song title, look for the album nsme, and the track... (type all lowercase)</p>
+            <div id="goofy secret" style="font-family: 'VCR OSD Mono', monospace; color: white; padding: 10px;">
+                <input 
+                    type="password" 
+                    id="passwordInput" 
+                    placeholder="PASSWORD" 
+                    style="background-color: black; color: white; border: 1px solid white; font-family: 'VCR OSD Mono', monospace; padding: 9px;" 
+                />
+                <button 
+                    onclick="checkPassword()" 
+                    style="background-color: black; color: white; border: 1px solid white; font-family: 'VCR OSD Mono', monospace; padding: 9px;"
+                >
+                    SUBMIT
+                </button>
+            <p id="hiddenText" style="display: none; color: green;">
+                [/I'm sorry, V1. I truly am. Believe me though, I will reconstruct you. It will be perfect./]
+            </p>
+            <a id="hiddenLink" href="./hiddenpage.html" target="_blank" style="display: none; color: red;">
+                [HIDDEN PAGE]
+            </a>
+        </div>
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("passwordInput").value;
+            const correctPassword = "stage3f2";
+            const hiddenText = document.getElementById("hiddenText");
+            const hiddenLink = document.getElementById("hiddenLink");
+
+            if (password === correctPassword) {
+                hiddenText.style.display = "block";
+                hiddenLink.style.display = "inline";
+            } else {
+                alert("%c[/INCORRECT./]", "color: red;");
+            }
+        }
+    </script>
+
+    <div style="height:300px"></div>
+</div>
+
+        </div>
+    </body>
+</html>
+
+<!-- If you see this, hi there. You probably have no clue who coded this... hehehehe... -->
